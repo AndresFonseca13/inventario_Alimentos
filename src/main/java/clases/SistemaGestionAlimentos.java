@@ -38,4 +38,10 @@ public class SistemaGestionAlimentos {
     public List<HidratosDeCarbono> obtenerHidratosDeCarbonos() {
         return hidratosDeCarbonos;
     }
+
+    public void eliminarGrasa(Grasas grasa) {
+        frutasYVerduras.remove(grasa);
+    }
+
+
 }

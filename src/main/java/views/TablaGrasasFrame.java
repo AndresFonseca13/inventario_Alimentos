@@ -53,6 +53,23 @@ public class TablaGrasasFrame extends JFrame {
             });
         });
         add(btnRegistrar, BorderLayout.SOUTH);
+
+        JButton btnEliminar = new JButton("Eliminar alimento");
+        btnEliminar.setFont(new Font("Arial", Font.BOLD, 18));
+        btnEliminar.setBackground(new Color(0, 153, 0));
+        btnEliminar.setForeground(Color.WHITE);
+        btnEliminar.addActionListener(e -> {
+            int filaSeleccionada = table.getSelectedRow();
+            if (filaSeleccionada == -1) {
+                JOptionPane.showMessageDialog(this, "Por favor seleccione una fila");
+            } else {
+                String nombre = (String) table.getValueAt(filaSeleccionada, 0);
+                // Encuentra la grasa por el nombre y la elimina
+                sistemaGestionAlimentos.eliminarGrasa(null);
+                actualizarTabla();
+            }
+        });
+        add(btnEliminar, BorderLayout.NORTH);
     }
 
 
