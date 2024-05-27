@@ -15,20 +15,20 @@ public class LoginFrame extends JFrame {
 
     public LoginFrame(SistemaGestionUsuarios sistemaGestionUsuarios, SistemaGestionAlimentos sistemaGestionAlimentos) {
 
-        setTitle("Inventario de Alimentos - Login");
-        setSize(700, 500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setLayout(new BorderLayout());
+        setTitle("Inventario de Alimentos - Login"); // Titulo de la ventana
+        setSize(700, 500); // Tamaño de la ventana
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Terminar el programa al cerrar la ventana
+        setLocationRelativeTo(null); // Centrar la ventana
+        setLayout(new BorderLayout()); // Ajusta el layout de la ventana a BorderLayout
 
         // Panel superior con el logo
         JPanel panelLogo = new JPanel();
         panelLogo.setLayout(new BoxLayout(panelLogo, BoxLayout.Y_AXIS)); // Ajusta el layout a BoxLayout
         panelLogo.setBackground(new Color(204, 255, 204));
 
-        JLabel lblLogo = new JLabel("Inventario de Alimentos", JLabel.CENTER);
-        lblLogo.setFont(new Font("Arial", Font.BOLD, 24));
-        lblLogo.setForeground(new Color(0, 153, 0));
+        JLabel lblLogo = new JLabel("Inventario de Alimentos", JLabel.CENTER); // Crea un JLabel con el texto centrado
+        lblLogo.setFont(new Font("Arial", Font.BOLD, 24)); // Ajusta la fuente del JLabel
+        lblLogo.setForeground(new Color(0, 153, 0)); // Ajusta el color del texto
         lblLogo.setAlignmentX(Component.CENTER_ALIGNMENT); // Centra el JLabel
         panelLogo.add(Box.createVerticalGlue()); // Agrega espacio flexible antes
         panelLogo.add(lblLogo);

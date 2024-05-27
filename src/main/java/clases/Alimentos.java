@@ -1,5 +1,6 @@
 package clases;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,7 +34,4 @@ public abstract class Alimentos {
         this.calorias = calorias;
         this.precio = precio;
     }
-
-
-
 }
