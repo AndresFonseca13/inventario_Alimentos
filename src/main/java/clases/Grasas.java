@@ -42,4 +42,14 @@ public class Grasas extends Alimentos implements AlimentoInterface {
                 "Tipo de grasa: " + tipoGrasa + "\n" +
                 "Origen: " + origen + "\n";
     }
+
+    @Override
+    public void comer() {
+        System.out.println("Estás comiendo un alimento que contiene grasa llamado " + this.nombre);
+    }
+
+    @Override
+    public void preparar() {
+        System.out.println("Estás preparando un alimento que contiene grasa llamado " + this.nombre);
+    }
 }

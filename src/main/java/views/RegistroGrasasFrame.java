@@ -25,7 +25,7 @@ public class RegistroGrasasFrame extends JFrame {
     public RegistroGrasasFrame(SistemaGestionAlimentos sistemaGestionAlimentos) {
         this.sistemaGestionAlimentos = sistemaGestionAlimentos;
 
-        setTitle("Registrar Grasa");
+        setTitle("Registrar Alimento de Tipo Grasa");
         setSize(400, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -149,11 +149,11 @@ public class RegistroGrasasFrame extends JFrame {
 
                     // Mostrar la información detallada del nuevo alimento en un cuadro de diálogo
                     String informacionDetallada = nuevaGrasa.mostrarInformacionDetallada();
-                    int opcion = JOptionPane.showConfirmDialog(RegistroGrasasFrame.this, "Estás seguro de registrar esta nueva grasa?\n\n" + informacionDetallada, "Confirmar registro", JOptionPane.OK_CANCEL_OPTION);
+                    int opcion = JOptionPane.showConfirmDialog(RegistroGrasasFrame.this, "Estás seguro de registrar esta nuevo Alimento a la categoria de Alimentos Con Grasa?\n\n" + informacionDetallada, "Confirmar registro", JOptionPane.OK_CANCEL_OPTION);
 
                     if (opcion == JOptionPane.OK_OPTION) {
                         sistemaGestionAlimentos.agregarGrasa(nuevaGrasa);
-                        JOptionPane.showMessageDialog(RegistroGrasasFrame.this, "Grasa registrada exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(RegistroGrasasFrame.this, "Alimento de la categoria de Grasa registrado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
                         dispose();
                     }
                 } catch (NumberFormatException ex) {

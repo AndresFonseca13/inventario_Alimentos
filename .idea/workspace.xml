@@ -5,20 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bce2db64-ddd1-4ce7-8ef6-a3f1542f157d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/Comestible.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clases/Alimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clases/Alimentos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clases/FrutasYVerduras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clases/FrutasYVerduras.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clases/Grasas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clases/Grasas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clases/HidratosDeCarbono.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clases/HidratosDeCarbono.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clases/SistemaGestionAlimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clases/SistemaGestionAlimentos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clases/SistemaGestionUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clases/SistemaGestionUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clases/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clases/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/views/RegistroCarbohidratosFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/RegistroCarbohidratosFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/RegistroFrutasVerdurasFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/RegistroFrutasVerdurasFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/views/RegistroGrasasFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/RegistroGrasasFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/TablaCarbohidratosFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/TablaCarbohidratosFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/TablaFrutasVerdurasFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/TablaFrutasVerdurasFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/TablaGrasasFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/TablaGrasasFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -115,7 +109,8 @@
       <workItem from="1716898994841" duration="3431000" />
       <workItem from="1716910598122" duration="2066000" />
       <workItem from="1716915811573" duration="6275000" />
-      <workItem from="1716935017249" duration="917000" />
+      <workItem from="1716935017249" duration="1222000" />
+      <workItem from="1716937376499" duration="1809000" />
     </task>
     <servers />
   </component>

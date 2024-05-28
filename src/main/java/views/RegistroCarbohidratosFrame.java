@@ -24,7 +24,7 @@ public class RegistroCarbohidratosFrame extends JFrame{
 
     public RegistroCarbohidratosFrame(SistemaGestionAlimentos sistemaGestionAlimentos) {
 
-        setTitle("Registrar Carbohidrato");
+        setTitle("Registrar Alimento de Tipo Carbohidrato");
         setSize(400, 600);
         setBackground(new Color(204, 255, 204));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -148,15 +148,15 @@ public class RegistroCarbohidratosFrame extends JFrame{
 
                     // Mostrar la información detallada del nuevo alimento en un cuadro de diálogo
                     String informacionDetallada = nuevaCarbohidrato.mostrarInformacionDetallada();
-                    int opcion = JOptionPane.showConfirmDialog(RegistroCarbohidratosFrame.this, "Estás seguro de registrar este nuevo carbohidrato?\n\n" + informacionDetallada, "Confirmar registro", JOptionPane.OK_CANCEL_OPTION);
+                    int opcion = JOptionPane.showConfirmDialog(RegistroCarbohidratosFrame.this, "Estás seguro de registrar este nuevo Alimento de tipo carbohidrato?\n\n" + informacionDetallada, "Confirmar registro", JOptionPane.OK_CANCEL_OPTION);
 
                     if (opcion == JOptionPane.OK_OPTION) {
                         sistemaGestionAlimentos.agregarHidratoDeCarbono(nuevaCarbohidrato);
-                        JOptionPane.showMessageDialog(RegistroCarbohidratosFrame.this, "Grasa registrada exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(RegistroCarbohidratosFrame.this, "Alimento De tipo Carbohidrato registrad exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
                         dispose();
                     }
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(RegistroCarbohidratosFrame.this, "Por favor, ingrese valores válidos para calorías y precio.", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(RegistroCarbohidratosFrame.this, "Por favor, ingrese valores válidos para calorías, indice Glucemico y precio.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

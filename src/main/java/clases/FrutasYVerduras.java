@@ -42,4 +42,14 @@ public class FrutasYVerduras extends Alimentos implements AlimentoInterface {
                 "Color: " + color + "\n" +
                 "Es de temporada: " + esDeTemporada + "\n";
     }
+
+    @Override
+    public void comer() {
+        System.out.println("Estás comiendo una fruta o verdura llamada " + this.nombre);
+    }
+
+    @Override
+    public void preparar() {
+        System.out.println("Estás preparando una fruta o verdura llamada " + this.nombre);
+    }
 }

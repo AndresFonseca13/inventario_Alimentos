@@ -1,6 +1,7 @@
 package clases;
 
 
+import interfaces.Comestible;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +12,7 @@ import lombok.Setter;
 
 // La clase Alimentos es una clase abstracta que representa un alimento genérico.
 // Esta clase contiene los campos y métodos comunes a todos los alimentos.
-public abstract class Alimentos {
+public abstract class Alimentos implements Comestible {
 
     // Nombre del alimento
     String nombre;
@@ -48,5 +49,18 @@ public abstract class Alimentos {
         this.forma = forma;
         this.calorias = calorias;
         this.precio = precio;
+    }
+
+    // Implementación de los métodos de la interfaz Comestible
+    @Override
+    public void comer() {
+        // Implementación por defecto (puede ser sobrescrita en las subclases)
+        System.out.println("Estás comiendo " + this.nombre);
+    }
+
+    @Override
+    public void preparar() {
+        // Implementación por defecto (puede ser sobrescrita en las subclases)
+        System.out.println("Estás preparando " + this.nombre);
     }
 }

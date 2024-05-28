@@ -42,4 +42,14 @@ public class HidratosDeCarbono extends Alimentos implements AlimentoInterface {
                 "Indice Glucemico: " + indiceGlucemico + "\n" +
                 "Es integral: " + esIntegral + "\n";
     }
+
+    @Override
+    public void comer() {
+        System.out.println("Estás comiendo un alimento que es carbohidrato llamado " + this.nombre);
+    }
+
+    @Override
+    public void preparar() {
+        System.out.println("Estás preparando un alimento que es carbohidrato llamado " + this.nombre);
+    }
 }
