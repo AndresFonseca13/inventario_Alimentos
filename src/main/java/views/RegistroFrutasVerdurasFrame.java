@@ -146,9 +146,16 @@ public class RegistroFrutasVerdurasFrame extends JFrame {
                     boolean esDeTemporada = chkEsDeTemporada.isSelected();
 
                     FrutasYVerduras nuevaFrutaVerdura = new FrutasYVerduras(nombre, textura, sabor, tamanho, aroma, forma, calorias, precio, color, esDeTemporada);
-                    sistemaGestionAlimentos.agregarFrutaVerdura(nuevaFrutaVerdura);
-                    JOptionPane.showMessageDialog(RegistroFrutasVerdurasFrame.this, "Fruta o verdura registrada exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                    dispose();
+
+                    // Mostrar la información detallada del nuevo alimento en un cuadro de diálogo
+                    String informacionDetallada = nuevaFrutaVerdura.mostrarInformacionDetallada();
+                    int opcion = JOptionPane.showConfirmDialog(RegistroFrutasVerdurasFrame.this, "Estás seguro de registrar este nuevo alimento a la categoría de frutas y verduras?\n\n" + informacionDetallada, "Confirmar registro", JOptionPane.OK_CANCEL_OPTION);
+
+                    if (opcion == JOptionPane.OK_OPTION) {
+                        sistemaGestionAlimentos.agregarFrutaVerdura(nuevaFrutaVerdura);
+                        JOptionPane.showMessageDialog(RegistroFrutasVerdurasFrame.this, "Fruta o verdura registrada exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                        dispose();
+                    }
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(RegistroFrutasVerdurasFrame.this, "Por favor, ingrese valores válidos para calorías y precio.", "Error", JOptionPane.ERROR_MESSAGE);
                 }

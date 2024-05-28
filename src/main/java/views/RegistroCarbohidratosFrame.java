@@ -1,6 +1,6 @@
 package views;
 
-import clases.FrutasYVerduras;
+import clases.Grasas;
 import clases.HidratosDeCarbono;
 import clases.SistemaGestionAlimentos;
 
@@ -144,12 +144,19 @@ public class RegistroCarbohidratosFrame extends JFrame{
                     int indiceGlucemico = Integer.parseInt(txtIndiceGlucemico.getText());
                     boolean esIntegral = chkEsIntegral.isSelected();
 
-                    HidratosDeCarbono hidratosDeCarbono = new HidratosDeCarbono(nombre, textura, sabor, tamanho, aroma, forma, calorias, precio, indiceGlucemico, esIntegral);
-                    sistemaGestionAlimentos.agregarHidratoDeCarbono(hidratosDeCarbono);
-                    JOptionPane.showMessageDialog(RegistroCarbohidratosFrame.this, "Carbohidrato registrado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                    dispose();
+                    HidratosDeCarbono nuevaCarbohidrato = new HidratosDeCarbono(nombre, textura, sabor, tamanho, aroma, forma, calorias, precio, indiceGlucemico, esIntegral);
+
+                    // Mostrar la información detallada del nuevo alimento en un cuadro de diálogo
+                    String informacionDetallada = nuevaCarbohidrato.mostrarInformacionDetallada();
+                    int opcion = JOptionPane.showConfirmDialog(RegistroCarbohidratosFrame.this, "Estás seguro de registrar este nuevo carbohidrato?\n\n" + informacionDetallada, "Confirmar registro", JOptionPane.OK_CANCEL_OPTION);
+
+                    if (opcion == JOptionPane.OK_OPTION) {
+                        sistemaGestionAlimentos.agregarHidratoDeCarbono(nuevaCarbohidrato);
+                        JOptionPane.showMessageDialog(RegistroCarbohidratosFrame.this, "Grasa registrada exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                        dispose();
+                    }
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(RegistroCarbohidratosFrame.this, "Por favor, ingrese valores válidos para calorías, indice glucemico y precio.", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(RegistroCarbohidratosFrame.this, "Por favor, ingrese valores válidos para calorías y precio.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

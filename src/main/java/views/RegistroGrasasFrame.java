@@ -146,9 +146,16 @@ public class RegistroGrasasFrame extends JFrame {
                     String origen = txtOrigen.getText();
 
                     Grasas nuevaGrasa = new Grasas(nombre, textura, sabor, tamanho, aroma, forma, calorias, precio, tipoGrasa, origen);
-                    sistemaGestionAlimentos.agregarGrasa(nuevaGrasa);
-                    JOptionPane.showMessageDialog(RegistroGrasasFrame.this, "Grasa registrada exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                    dispose();
+
+                    // Mostrar la información detallada del nuevo alimento en un cuadro de diálogo
+                    String informacionDetallada = nuevaGrasa.mostrarInformacionDetallada();
+                    int opcion = JOptionPane.showConfirmDialog(RegistroGrasasFrame.this, "Estás seguro de registrar esta nueva grasa?\n\n" + informacionDetallada, "Confirmar registro", JOptionPane.OK_CANCEL_OPTION);
+
+                    if (opcion == JOptionPane.OK_OPTION) {
+                        sistemaGestionAlimentos.agregarGrasa(nuevaGrasa);
+                        JOptionPane.showMessageDialog(RegistroGrasasFrame.this, "Grasa registrada exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                        dispose();
+                    }
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(RegistroGrasasFrame.this, "Por favor, ingrese valores válidos para calorías y precio.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
